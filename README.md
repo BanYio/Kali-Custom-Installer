@@ -19,6 +19,24 @@ Ideal para montar entornos rápidos en máquinas virtuales o equipos recién for
 
 # Instalación
 A continuación se detallan los pasos para ejecutar el script y desplegar el entorno personalizado en tu Kali Linux. El proceso es completamente automatizado, pero asegúrate de revisar y comprender lo que se instalará antes de ejecutarlo. Se recomienda hacerlo sobre una instalación limpia o en un entorno controlado.
+
+- **Primero actualizamos el sistema**
+
 ```bash
-git clone 
+sudo apt update
+sudo apt full-upgrade -y
+sudo apt autoremove -y
 ```
+- **Una vez hemos actualizado el sistema, podemos instalar y ejecutar el script para personalizar nuestro entorno.**
+```bash
+git clone https://github.com/BanYio/Kali-Custom-Installer.git
+cd Kali-Custom-Installer.git
+chmod +x deploy-kali-banyio.sh
+sudo ./deploy-kali-banyio.sh
+```
+- Durante la ejecución del script, en el momento de instalar *ohmyzsh*, tendremos que salir de esta nueva terminal que nos aparece en 2 ocasiones, ya que se instala tanto para el usuario que está ejecutando el script como para root.
+```bash
+exit
+exit
+```
+Una vez ejecutado el script nos pedirá la opción de reinciar el equipo para que todos los cambios se apliquen correctamente, este paso no es obligatorio, pero si **recomendable**
