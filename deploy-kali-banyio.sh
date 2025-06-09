@@ -43,7 +43,7 @@ check_installed() {
 ################
 
 # Instalar aplicaciones
-apt install bloodhound bloodhound.py mitm6 seclists flameshot golang -y
+apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev -y
 sudo -u "$REAL_USER" pip install certipy-ad --break-system-packages
 
 # Instalar Obsidian
@@ -144,6 +144,23 @@ cd "$AUTONMAP_DIR"
 chmod +x autonmap.sh
 sudo cp autonmap.sh /usr/local/bin/autonmap
 echo -e "${GREEN}[+] AutoNMAP instalado y movido a /usr/local/bin/${RESET}"
+
+# Instalar clipmenu
+echo -e "${GREEN}[+] Instalando Clipmenu...${RESET}"
+CLIPMENU_DIR="/opt/clipmenu"
+git clone https://github.com/cdown/clipmenu.git "$CLIPMENU_DIR"
+cd "$CLIPMENU_DIR"
+make clean
+make
+make install
+sudo make install
+systemctl --user daemon-reexec
+systemctl --user daemon-reload
+systemctl --user enable --now clipmenud.service
+echo -e "${GREEN}[+] Clipmenu instalado y creado el servicio de usuario clipmenud${RESET}"
+
+# Atajo de teclado para abrir clipmenu con CTRL+SHIFT+a
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Control><Shift>a" -n -t string -s "clipmenu"
 
 ############
 # TERMINAL #
