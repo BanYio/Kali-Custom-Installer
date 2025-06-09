@@ -269,19 +269,19 @@ check_tool bloodhound
 check_tool mitm6
 check_tool flameshot
 check_tool golang
-check_tool certipy
+check_tool certipy-ad
 check_tool obsidian
 check_tool google-chrome
 check_tool protonvpn
 check_tool codium
 check_tool kerbrute
 check_tool autonmap
+check_tool clipmenu
 # Comprobaciones de archivos/movidos
 check_file /usr/local/bin/kerbrute
 check_file /usr/local/bin/pygpoabuse
 check_file /usr/local/bin/targetedKerberoast
 check_file /usr/local/bin/autonmap
-check_file "$WALLPAPER_PATH"
 check_file /usr/share/kali-themes/xfce-panel-genmon-iplocal.sh
 echo -e "${YELLOW}[*] Verificación finalizada.${RESET}"
 
