@@ -41,4 +41,6 @@ exit
 ```
 ![image](https://github.com/user-attachments/assets/29c50f70-671f-49a0-818c-47eae3212bd4)
 
-Una vez ejecutado el script nos pedirá la opción de reinciar el equipo para que todos los cambios se apliquen correctamente, este paso no es obligatorio, pero si **recomendable**
+Una vez ejecutado el script nos pedirá la opción de reinciar el equipo para que todos los cambios se apliquen correctamente, este paso no es obligatorio, pero si **recomendable**.
+
+
