@@ -230,11 +230,11 @@ EOF
 ###################
 
 # Añadir fondo de pantalla a Pictures
-cp "/home/$REAL_USER/Kali-Linux-ENV/wallpaper.PNG" "/home/$REAL_USER/Pictures/"
+cp "/home/$REAL_USER/Kali-Custom-Installer/wallpaper.PNG" "/home/$REAL_USER/Pictures/"
 #git clone https://github.com/owerdogan/wallpapers-for-kali.git
 
 # Añadir plugin al panel de kali-themes
-cp xfce-panel-genmon-iplocal.sh /usr/share/kali-themes/
+cp /home/$REAL_USER/Kali-Custom-Installer/xfce-panel-genmon-iplocal.sh /usr/share/kali-themes/
 chmod +x /usr/share/kali-themes/xfce-panel-genmon-iplocal.sh
 echo -e "${GREEN}[+] Restaurando panel XFCE para $REAL_USER...${RESET}"
 echo -e "${GREEN}[+] Restaurando panel XFCE desde el archivo exportado...${RESET}"
