@@ -201,7 +201,7 @@ if [ -f "$QTERM_CONF" ]; then
     sed -i 's/^KeyboardCursorShape=[0-9]\+/KeyboardCursorShape=2/' "$QTERM_CONF"
     echo -e "${GREEN}[+] Forma del cursor del teclado cambiada.${RESET}"
 
-    # Cambiar el la transparencia de la terminal
+    # Cambiar la transparencia de la terminal
     sed -i 's/^ApplicationTransparency=[0-9]\+/ApplicationTransparency=0/' "$QTERM_CONF"
     echo -e "${GREEN}[+] Transparencial de la terminal cambiada.${RESET}"
 
