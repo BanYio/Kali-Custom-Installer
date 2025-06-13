@@ -43,7 +43,7 @@ check_installed() {
 ################
 
 # Instalar aplicaciones
-apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev -y
+apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev bloodyad -y
 sudo -u "$REAL_USER" pip install certipy-ad --break-system-packages
 
 # Instalar Obsidian
