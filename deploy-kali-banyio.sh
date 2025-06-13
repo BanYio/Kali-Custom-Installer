@@ -20,7 +20,7 @@ USER_ZSHRC="/home/$REAL_USER/.zshrc"
 QTERM_CONF="/home/$REAL_USER/.config/qterminal.org/qterminal.ini"
 
 # Ruta de la imagen de fondo
-WALLPAPER_PATH="/home/$REAL_USER/Pictures/wallpaper.PNG"
+WALLPAPER_PATH="/home/$REAL_USER/Pictures/kali-wallpaper.jpg"
 
 # Verificar si se ejecuta como root
 if [[ "$EUID" -ne 0 ]]; then
@@ -230,8 +230,7 @@ EOF
 ###################
 
 # Añadir fondo de pantalla a Pictures
-cp "/home/$REAL_USER/Kali-Custom-Installer/wallpaper.PNG" "/home/$REAL_USER/Pictures/"
-#git clone https://github.com/owerdogan/wallpapers-for-kali.git
+cp "/home/$REAL_USER/Kali-Custom-Installer/kali-wallpaper.jpg" "/home/$REAL_USER/Pictures/"
 
 # Añadir plugin al panel de kali-themes
 cp /home/$REAL_USER/Kali-Custom-Installer/xfce-panel-genmon-iplocal.sh /usr/share/kali-themes/
