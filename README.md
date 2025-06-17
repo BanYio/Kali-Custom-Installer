@@ -12,6 +12,32 @@ kerbrute, pygpoabuse, bloodHound, entre otras.
 - Configuración de panel, entorno gráfico y otras personalizaciones para mayor productividad.
 Ideal para montar entornos rápidos en máquinas virtuales o equipos recién formateados.
 
+## Aplicaciones y herramientas
+- bloodhound
+- bloodhound.py
+- bloodyad
+- certipy-ad
+- kerbrute
+- pyGPOAbuse
+- targetedKerberoast
+- Obsidian
+- Google-Chrome
+- Proton-VPN
+- VSCodium
+- clipmenu
+- OhMyZsh
+- mitm6
+- seclists
+- flameshot
+- golang
+- dmenu
+- xsel
+- xdotool
+- libxfixes-dev
+- AutoNMAP
+
+Además se añaden 2 atajos de teclado; para abrir APPS con **CTRL+SPACE** y abrir clipmenu con **CTRL+SHIFT+A**
+
 ## Requisitos
 - Distribución Kali Linux (recomendado: versión actualizada).
 - Permisos de superusuario.
