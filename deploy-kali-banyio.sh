@@ -271,7 +271,7 @@ check_tool golang
 check_tool certipy-ad
 check_tool obsidian
 check_tool google-chrome
-check_tool protonvpn
+check_tool proton-vpn-gnome-desktop
 check_tool codium
 check_tool kerbrute
 check_tool autonmap
