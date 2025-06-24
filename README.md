@@ -46,14 +46,14 @@ Además se añaden 2 atajos de teclado; para abrir APPS con **CTRL+SPACE** y abr
 # Instalación
 A continuación se detallan los pasos para ejecutar el script y desplegar el entorno personalizado en tu Kali Linux. El proceso es completamente automatizado, pero asegúrate de revisar y comprender lo que se instalará antes de ejecutarlo. Se recomienda hacerlo sobre una instalación limpia o en un entorno controlado.
 
-- **Primero actualizamos el sistema**
+- Primero actualizamos el sistema
 
 ```bash
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt autoremove -y
 ```
-- **Una vez hemos actualizado el sistema, podemos instalar y ejecutar el script para personalizar nuestro entorno.**
+- Una vez hemos actualizado el sistema, podemos instalar y ejecutar el script para personalizar nuestro entorno.
 ```bash
 git clone https://github.com/BanYio/Kali-Custom-Installer.git
 cd Kali-Custom-Installer.git
