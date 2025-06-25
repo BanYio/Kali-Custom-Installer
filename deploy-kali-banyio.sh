@@ -160,7 +160,7 @@ systemctl --user enable --now clipmenud.service
 echo -e "${GREEN}[+] Clipmenu instalado y creado el servicio de usuario clipmenud${RESET}"
 
 # Atajo de teclado para abrir clipmenu con CTRL+SHIFT+a
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Control><Shift>a" -n -t string -s "clipmenu"
+ sudo -u "$REAL_USER" -H bash -c 'xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Control><Shift>a" -n -t string -s "clipmenu"'
 
 ############
 # TERMINAL #
@@ -242,7 +242,7 @@ echo -e "${GREEN}[+] Restaurando panel XFCE desde el archivo exportado...${RESET
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
 # Añadir atajo de teclado para abrir APPS con CTRL+SPACE
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -n -t string -s "xfce4-appfinder"
+ sudo -u "$REAL_USER" -H bash -c 'xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -n -t string -s "xfce4-appfinder"'
 
 #####################################
 #COMPROBACIÓN DE PAQUETES INSTALADOS#
