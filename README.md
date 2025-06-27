@@ -2,6 +2,8 @@
 
 Kali Custom Installer es un script en Bash diseñado para desplegar de forma rápida y automatizada un entorno personalizado de Kali Linux, pensado para profesionales de ciberseguridad, pentesters y entusiastas que desean tener su entorno listo para trabajar sin perder tiempo configurando desde cero.
 
+![image](https://github.com/user-attachments/assets/531a0182-0ae0-416c-9750-956f22497de3)
+
 Este script configura y optimiza el sistema con herramientas esenciales, personalización de terminal, mejoras visuales y utilidades prácticas para el día a día en auditorías y laboratorios.
 
 ## Características principales
