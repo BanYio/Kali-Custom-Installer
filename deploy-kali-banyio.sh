@@ -41,7 +41,7 @@ check_installed() {
 
 # Instalar aplicaciones
 sudo apt update
-apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev bloodyad -y
+apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev bloodyad feroxbuster -y
 sudo -u "$REAL_USER" pip install certipy-ad --break-system-packages
 
 # Instalar Obsidian
@@ -236,15 +236,14 @@ check_file() {
 check_tool bloodhound
 check_tool mitm6
 check_tool flameshot
-check_tool golang
 check_tool certipy-ad
 check_tool obsidian
 check_tool google-chrome
-check_tool proton-vpn-gnome-desktop
 check_tool codium
 check_tool kerbrute
 check_tool autonmap
 check_tool clipmenu
+check_tool feroxbuster
 # Comprobaciones de archivos/movidos
 check_file /usr/local/bin/kerbrute
 check_file /usr/local/bin/pygpoabuse
