@@ -57,7 +57,7 @@ sudo apt autoremove -y
 ```bash
 git clone https://github.com/BanYio/Kali-Custom-Installer.git
 cd Kali-Custom-Installer.git
-chmod +x deploy-kali-banyio.sh
+chmod +x *.sh
 sudo ./deploy-kali-banyio.sh
 ```
 - Durante la ejecución del script, en el momento de instalar *ohmyzsh*, tendremos que salir de esta nueva terminal que nos aparece en 2 ocasiones, ya que se instala tanto para el usuario que está ejecutando el script como para root.
@@ -69,4 +69,27 @@ exit
 
 Una vez ejecutado el script nos pedirá la opción de reinciar el equipo para que todos los cambios se apliquen correctamente, este paso no es obligatorio, pero si **recomendable**.
 
+# Personalización
+
+Despúes de reiniciar el equipo, podemos ejecutar el script para la personalización de la terminal y los atajos de teclado.
+
+```bash
+./change-terminal-and-shortcuts.sh
+```
+
+Es necesario reiniciar la terminal para que se apliquen los cambios.
+
+Ahora podemos añadir el panel personalizado y el fondo de pantalla. Para ello vamos a la barra del panel, click derecho, panel, Panel Preferences.
+
+![image](https://github.com/user-attachments/assets/0305d0ea-cf37-4207-81fd-9ae2fd3c793b)
+
+Ahora le damos a BackUp & Restore, e importamos el panel del repositorio
+
+![image](https://github.com/user-attachments/assets/676dddba-9405-436a-b66a-66707c2a847f)
+
+Una vez hemos añadido el panel personalizado, lo seleccionamos y le damos a aplicar, nos aparecerá un error, le damos a **REMOVE** y funciona perfectamente.
+
+![image](https://github.com/user-attachments/assets/5663d9c0-5fb6-4251-ae84-66673b59f6af)
+
+Ahora ya tenemos el entorno personalizado con herramientas que pueden ser bastante útiles en nuestro día a día como pentesters.
 
