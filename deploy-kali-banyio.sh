@@ -16,9 +16,6 @@ echo -e "${YELLOW}[*] Iniciando script de configuración de entorno Kali...${RES
 REAL_USER=$(logname)
 USER_ZSHRC="/home/$REAL_USER/.zshrc"
 
-# Ruta al archivo de configuración de QTerminal
-QTERM_CONF="/home/$REAL_USER/.config/qterminal.org/qterminal.ini"
-
 # Ruta de la imagen de fondo
 WALLPAPER_PATH="/home/$REAL_USER/Pictures/kali-wallpaper.jpg"
 
@@ -43,6 +40,7 @@ check_installed() {
 ################
 
 # Instalar aplicaciones
+sudo apt update
 apt install bloodhound bloodhound.py mitm6 seclists flameshot golang dmenu xsel xdotool git libxfixes-dev bloodyad -y
 sudo -u "$REAL_USER" pip install certipy-ad --break-system-packages
 
@@ -159,9 +157,6 @@ systemctl --user daemon-reload
 systemctl --user enable --now clipmenud.service
 echo -e "${GREEN}[+] Clipmenu instalado y creado el servicio de usuario clipmenud${RESET}"
 
-# Atajo de teclado para abrir clipmenu con CTRL+SHIFT+a
- sudo -u "$REAL_USER" -H bash -c 'xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Control><Shift>a" -n -t string -s "clipmenu"'
-
 ############
 # TERMINAL #
 ############
@@ -188,29 +183,6 @@ echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> "$USER_Z
 echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> /root/.zshrc
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$USER_ZSHRC"
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> /root/.zshrc
-
-echo -e "${GREEN}[+] Cambiando esquema de colores de QTerminal a Tango...${RESET}"
-
-# Comprobar si el archivo existe
-if [ -f "$QTERM_CONF" ]; then
-    # Reemplazar colorScheme=Kali-Dark por colorScheme=Tango
-    sed -i 's/^colorScheme=Kali-Dark/colorScheme=Tango/' "$QTERM_CONF"
-    echo -e "${GREEN}[+] Esquema de colores cambiado a Tango.${RESET}"
-
-    # Cambiar el valor de KeyboardCursorShape de 0 a 2
-    sed -i 's/^KeyboardCursorShape=[0-9]\+/KeyboardCursorShape=2/' "$QTERM_CONF"
-    echo -e "${GREEN}[+] Forma del cursor del teclado cambiada.${RESET}"
-
-    # Cambiar la transparencia de la terminal
-    sed -i 's/^ApplicationTransparency=[0-9]\+/ApplicationTransparency=0/' "$QTERM_CONF"
-    echo -e "${GREEN}[+] Transparencial de la terminal cambiada.${RESET}"
-
-    # Cambiar la fuente de la terminal
-    sed -i 's/^fontFamily=[^[:space:]]\+/fontFamily=Fira Code SemiBold/' "$QTERM_CONF"
-    echo -e "${GREEN}[+] Fuente y tamaño cambiada.${RESET}"
-else
-    echo -e "${YELLOW}[-] El archivo de configuración de QTerminal no se encontró en $QTERM_CONF${RESET}"
-fi
 
 # Cambiar el tema robbyrussell.zsh-theme solo para root
 echo -e "${GREEN}[+] Personalizando tema robbyrussell para el usuario root...${RESET}"
@@ -240,9 +212,6 @@ echo -e "${GREEN}[+] Restaurando panel XFCE desde el archivo exportado...${RESET
 
 # Descomprimir rockyou
 gunzip /usr/share/wordlists/rockyou.txt.gz
-
-# Añadir atajo de teclado para abrir APPS con CTRL+SPACE
- sudo -u "$REAL_USER" -H bash -c 'xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -n -t string -s "xfce4-appfinder"'
 
 #####################################
 #COMPROBACIÓN DE PAQUETES INSTALADOS#
