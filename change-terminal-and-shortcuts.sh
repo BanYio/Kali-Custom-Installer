@@ -17,7 +17,7 @@ sed -i 's/^ApplicationTransparency=[0-9]\+/ApplicationTransparency=0/' "$QTERM_C
 echo -e "${GREEN}[+] Transparencial de la terminal cambiada.${RESET}"
 
 # Cambiar la fuente de la terminal
-sed -i 's/^fontFamily=[^[:space:]]\+/fontFamily=Fira Code SemiBold/' "$QTERM_CONF"
+sed -i 's/^fontFamily=[^[:space:]]\+/fontFamily=Fira Code Retina/' "$QTERM_CONF"
 echo -e "${GREEN}[+] Fuente y tamaño cambiada.${RESET}"
 
 
