@@ -152,10 +152,6 @@ make clean
 make
 make install
 sudo make install
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reexec'
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reload'
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user enable --now clipmenud.service'
-echo -e "${GREEN}[+] Clipmenu instalado y creado el servicio de usuario clipmenud${RESET}"
 
 ############
 # TERMINAL #
