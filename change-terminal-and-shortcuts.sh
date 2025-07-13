@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Colores para el output
+GREEN="\e[32m"
+RED="\e[31m"
+YELLOW="\e[33m"
+RESET="\e[0m"
+
 REAL_USER=$(logname)
 QTERM_CONF="/home/$REAL_USER/.config/qterminal.org/qterminal.ini"
 
@@ -27,3 +34,12 @@ xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Control><Shift>a"
 
 # Añadir atajo de teclado para abrir APPS con CTRL+SPACE
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Primary>space" -n -t string -s "xfce4-appfinder"
+echo -e "${GREEN}[+] Añadidos los atajos de teclado${RESET}"
+
+
+
+# Añadir servicio de clipmenu para el usuario
+sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reexec'
+sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reload'
+sudo -u "$REAL_USER" -H bash -c 'systemctl --user enable --now clipmenud.service'
+echo -e "${GREEN}[+] Creado el servicio de usuario clipmenud${RESET}"
