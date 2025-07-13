@@ -39,7 +39,7 @@ echo -e "${GREEN}[+] Añadidos los atajos de teclado${RESET}"
 
 
 # Añadir servicio de clipmenu para el usuario
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reexec'
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user daemon-reload'
-sudo -u "$REAL_USER" -H bash -c 'systemctl --user enable --now clipmenud.service'
+systemctl --user daemon-reexec
+systemctl --user daemon-reload
+systemctl --user enable --now clipmenud.service
 echo -e "${GREEN}[+] Creado el servicio de usuario clipmenud${RESET}"
