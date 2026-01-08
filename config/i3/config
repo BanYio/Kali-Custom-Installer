@@ -153,9 +153,9 @@ for_window [class="Thunar"] floating enable
 # AutoEXEC
 exec_always --no-startup-id exec i3-workspace-names-daemon
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-#exec --no-startup-id feh --bg-fill /home/banyio/Pictures/porsche.jpg
+
 # Wallpaper
-exec --no-startup-id sh -c 'sleep 1 && feh --no-fehbg --bg-fill /home/banyio/Pictures/porsche.jpg'
+exec --no-startup-id sh -c 'sleep 1 && feh --no-fehbg --bg-fill /home/banyio/Pictures/kali-wallpaper.jpg'
 
 # i3bar with i3blocks
 bar {
