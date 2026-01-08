@@ -39,6 +39,7 @@ check_installed() {
 
 # Instalar aplicaciones
 sudo apt update
+sudo apt install flameshot dmenu xsel xdotool git libxfixes-dev
 sudo apt remove netexec
 sudo apt autoremove
 sudo apt autoclean
