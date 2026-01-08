@@ -39,7 +39,7 @@ check_installed() {
 
 # Instalar aplicaciones
 sudo apt update
-sudo apt install flameshot dmenu xsel xdotool git libxfixes-dev
+sudo apt install flameshot dmenu xsel xdotool git libxfixes-dev tree i3 i3blocks i3lock i3lock-fancy i3status i3-wm picom rofi feh fonts-font-awesome jq
 sudo apt remove netexec
 sudo apt autoremove
 sudo apt autoclean
