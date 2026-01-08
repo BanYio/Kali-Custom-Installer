@@ -31,6 +31,7 @@ sudo ./kali-I3-deploy.sh
 | Windows + E | File Explorer (thunar) |
 | Windows + P | ProtonVPN |
 | Windows + Shift + A | clipmenu |
+| Windows + Shift + S | flameshot |
 
 
 ### Shortcuts for Kitty
