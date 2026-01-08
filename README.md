@@ -6,8 +6,42 @@ Kali Custom Installer es un script en Bash diseñado para desplegar de forma rá
 
 Este script configura y optimiza el sistema con herramientas esenciales, personalización de terminal, mejoras visuales y utilidades prácticas para el día a día en auditorías y laboratorios.
 
-### I3-install
+# I3-install
+```bash
+git clone https://github.com/BanYio/Kali-Custom-Installer.git
+cd Kali-Custom-Installer.git
+chmod +x *.sh
+sudo ./kali-I3-deploy.sh
+```
+### Shortcuts for window manager
+| command | exec |
+| :--- | :--- |
+| Windows + Space | Program launcher |
+| Windows + Enter | open kitty |
+| Windows + Shift + Q | close focused window |
+| Windows + Shift + R | Restar I3 manager |
+| Windows + L | Lock session |
+| Windows + Esc | Power Menu (Log-out, restart, power-off) |
 
+
+### Shortcuts for personal tools
+| command | exec |
+| :--- | :--- |
+| Windows + G | Google-Chrome |
+| Windows + E | File Explorer (thunar) |
+| Windows + P | ProtonVPN |
+| Windows + Shift + A | clipmenu |
+
+
+### Shortcuts for Kitty
+| command | exec |
+| :--- | :--- |
+| Windows + Shift + T | New Tab |
+| Ctrl + Shift + R | Split terminal right (vertical) |
+| Ctrl + Shift + D | Split terminal down (horizontal) |
+| Alt + arrows | Move to different terminal splits |
+| Ctrl + Shift + arrows | Resize selected split |
+| Ctrl + Tab | Move into tabs |
 
 ## Características principales
 - Instalación automática de herramientas como:
