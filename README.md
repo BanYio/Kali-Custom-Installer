@@ -6,6 +6,9 @@ Kali Custom Installer es un script en Bash diseñado para desplegar de forma rá
 
 Este script configura y optimiza el sistema con herramientas esenciales, personalización de terminal, mejoras visuales y utilidades prácticas para el día a día en auditorías y laboratorios.
 
+### I3-install
+
+
 ## Características principales
 - Instalación automática de herramientas como:
 kerbrute, pygpoabuse, bloodHound, entre otras.
