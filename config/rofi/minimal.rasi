@@ -1,0 +1,72 @@
+configuration {
+    display-drun: "Apps";
+    show-icons: true;
+}
+
+* {
+    lines: 12;
+    columns: 1;
+    background-color: #00000000;
+    text-color: #EFEFEF;
+    font: "Ubuntu Nerd Font Bold 14";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 30%;
+    height: 25%;
+    padding: 30;
+    border: 0;
+    border-radius: 8;
+    background-color: #00000000;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 12;
+    background-color: #00000000;
+}
+
+inputbar {
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+    background-color: #00000000;
+}
+
+prompt {
+    enabled: false;
+    background-color: #00000000;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    margin: 0;
+    background-color: #00000000;
+}
+
+entry {
+    background-color: #00000000;
+}
+
+case-indicator {
+    background-color: #00000000;
+}
+
+listview {
+    spacing: 6;
+    scrollbar: false;
+    background-color: #00000000;
+}
+
+element {
+    padding: 6;
+    border-radius: 12;
+    background-color: #00000000;
+    text-color: #EFEFEF;
+}
+
+element selected {
+    background-color: #1ff1308c;
+    text-color: #FFFFFF;
+}

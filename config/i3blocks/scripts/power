@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+ICON=""
+
+# Click izquierdo → abrir menú
+if [ "${BLOCK_BUTTON:-0}" = "1" ]; then
+  CHOICE=$(printf "   Logout\n  Reboot\n⏻ Poweroff" | rofi -dmenu -p "Power" -theme ~/.config/rofi/power.rasi)
+ 
+  case "$CHOICE" in
+    *Logout*) i3-msg exit ;;
+    *Reboot*) systemctl reboot ;;
+    *Poweroff*) systemctl poweroff ;;
+  esac
+fi
+
+echo "$ICON  "
