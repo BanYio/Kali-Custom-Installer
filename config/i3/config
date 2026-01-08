@@ -136,12 +136,6 @@ bindsym $mod+p exec protonvpn-app
 # Flameshot
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
-# Burpsuite
-bindsym $mod+b exec burpsuitepro
-
-# Obsidian
-bindsym $mod+o exec obsidian
-
 # Clipmenu
 bindsym $mod+shift+a exec clipmenu
 
